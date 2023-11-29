@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div class="headingTop">
+      <ul class="headingTop__nav">
+        <li id="faireNav">Faire</li>
+        <li id="homeNav">Home</li>
+        <li id="completedNav">Completed</li>
+        <li id="remainingNav">Remaining</li>
+      </ul>
+    </div>
+
+    <div class="inputTask">
+      <!-- SEARCH -->
+      <input
+        type="text"
+        id="searchInput"
+        onInput="searchTask()"
+        placeholder="Search Task "
+      />
+
+      <!-- NEW TASK -->
+      <div class="new__task">
+        <input type="text" id="newTask" placeholder="New Task" />
+        <button onclick="addTask()" class="buttonAddTask">Add Task</button>
+      </div>
+      <ul id="taskList" class="taskListed"></ul>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
