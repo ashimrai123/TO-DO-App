@@ -1,7 +1,6 @@
-// Array to store tasks
 let tasks = [];
 
-// Function to add a new task
+// ADD TASK
 function addTask() {
   const newTaskInput = document.getElementById("newTask");
   const newTaskText = newTaskInput.value.trim();
@@ -13,7 +12,7 @@ function addTask() {
   }
 }
 
-// Event listener for pressing Enter in the input field
+// Enter Key
 document.getElementById("newTask").addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       addTask();
@@ -21,7 +20,7 @@ document.getElementById("newTask").addEventListener("keydown", function (event) 
   });
   
 
-// Function to toggle the completion status of a task
+// Complete
 function toggleComplete(index) {
   tasks[index].completed = !tasks[index].completed;
   displayTasks();
@@ -38,7 +37,7 @@ function displayTasks(taskArray = tasks) {
       return;
     }
   
-    // Add each task to the list
+    // Add Task
     taskArray.forEach((task, index) => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `
@@ -53,7 +52,7 @@ function displayTasks(taskArray = tasks) {
   
 
 
-// Function to filter tasks based on the search input
+// SEARCH
 function searchTask() {
     const searchInput = document.getElementById("searchInput");
     const searchText = searchInput.value.trim().toLowerCase();
@@ -65,7 +64,7 @@ function searchTask() {
     displayTasks(filteredTasks);
   }
   
-  // Event listeners for the list items 
+  // Nav buttons
 
   document.getElementById("faireNav").addEventListener("click", function () {
     displayTasks(tasks);
